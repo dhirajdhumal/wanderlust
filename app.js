@@ -84,6 +84,10 @@ app.use((req, res, next) => {
     next();
 });
 
+app.get("/", (req, res) => {
+    res.render("Welcome.ejs");
+});
+
 
 app.use("/listings", lisitngsRouter);
 app.use("/listings/:id/reviews", reviewsRouter);
