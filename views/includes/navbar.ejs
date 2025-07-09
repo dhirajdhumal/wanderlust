@@ -24,13 +24,28 @@
 
   @media (max-width: 767.98px) {
   #navbarNavAltMarkup {
-    background-color: #f8f9fa !important; /* light gray */
+    background-color: rgb(255, 255, 255) !important; /* light gray */
   }
 }
 
+.full-width-border {
+  border-bottom: none; /* Disable default border if any */
+  position: relative;
+}
+
+.full-width-border::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw; /* full screen width */
+  height: 2px; /* thickness of the border */
+  background-color: rgb(245, 242, 242); /* or your desired color */
+  z-index: 999;
+}
 </style>
 
-<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+<nav class="navbar navbar-expand-md bg-body-light  sticky-top full-width-border">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">
       <img src="/images/WebsiteLogo.png" alt="Wanderlust Logo" style="height: 40px;">
@@ -40,7 +55,6 @@
     data-bs-target="#navbarNavAltMarkup"></button>
     
     <div class="collapse navbar-collapse p-3 bg-white bg-md-body" id="navbarNavAltMarkup">
-
 
       <div class="navbar-nav">
         <a class="nav-link" href="/listings">Explore</a>
