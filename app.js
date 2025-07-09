@@ -111,5 +111,5 @@ app.listen(port, '0.0.0.0', () => {
     console.log(`Server is listening on port ${port}`);
 });
 
-server.keepAliveTimeout = 120 * 1000;
-server.headersTimeout = 125 * 1000;
+// server.keepAliveTimeout = 120 * 1000;
+// server.headersTimeout = 125 * 1000;
